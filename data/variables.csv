@@ -1,0 +1,409 @@
+﻿Variables,Labels,Data
+caseid,Respondent ID number,NSFG male respondent
+givoralm,givoralm   KH-1 R has ever performed oral sex on a male,NSFG male respondent
+getoralm,getoralm   KH-2 R has ever received oral sex from a male,NSFG male respondent
+oralcondm,KH-2b R used a condom at last oral sex with a male partner,NSFG male respondent
+ANALSEX2,ANALSEX2   KH-3 Has a male partner ever put his penis in R's anus,NSFG male respondent
+ANALCONDM1,KH-3b R used a condom at last receptive anal sex with a male partner,NSFG male respondent
+ANALSEX3,ANALSEX3   KH-4 Has R ever put his penis in a male partner's anus,NSFG male respondent
+ANALCONDM2,KH-4b R used a condom at last insertive anal sex with a male partner,NSFG male respondent
+malesex,malesex    KH-4C R had any other sexual experience with another male,NSFG male respondent
+malprtage,KH-5 Relative age of R s most recent male sexual partner,NSFG male respondent
+samesexany,Ever had oral or anal sex with a male,NSFG male respondent
+malprthrace,HISPRACE2-recode-like variable for current/most recent same-sex partner (compute,NSFG male respondent
+SAMORAL12,KJ-2YRa Number of male (same-sex) partners in last year for oral sex,NSFG male respondent
+RECEPANAL12,KJ-2YRb Number of male (same-sex) partners in last year for receptive anal sex,NSFG male respondent
+INSERANAL12,KJ-2YRc Number of male (same-sex) partners in last year for insertive anal sex,NSFG male respondent
+SAMESEX1,SAMESEX1   KJ-3 R s age at first sexual experience with same-sex (male) partner,NSFG male respondent
+msamerel,msamerel   KJ-3a R s relationship with 1st male partner at time of 1st sex with him,NSFG male respondent
+msmnonmon,KJ-4 Number of non-monogamous male (same-sex) partners in last 12 months,NSFG male respondent
+MALSHT12,MALSHT12   KJ-5 Last 12 months: R had sex w/male intravenous drug user,NSFG male respondent
+JOHN2FRQ,JOHN2FRQ   KJ-6 Last 12 months: R gave money or drugs to male for sex,NSFG male respondent
+PROS2FRQ,PROS2FRQ   KJ-7 Last 12 months: R took money or drugs from male for sex,NSFG male respondent
+HIVMAL12,HIVMAL12   KJ-8 Last 12 months: R had sex with an HIV-positive male,NSFG male respondent
+MSMSORT12,KJ-10 Male partners in last 12 months: Chosen based on HIV status,NSFG male respondent
+cndlsmal,cndlsmal   KJ-11 Was condom used at last sex with a male partner,NSFG male respondent
+samlifenum,Number of same-sex partners in lifetime. (computed in FC K-14d),NSFG male respondent
+samyearnum,Number of same-sex partners in last 12 months. (computed in FC K-14f),NSFG male respondent
+condalls,condalls   KK-1 Was condom used at last sex w/male or female partner,NSFG male respondent
+mflastp,mflastp    KK-2 Was Last Sex Partner Male or Female?,NSFG male respondent
+whycond,whycond    KK-3 Reason For Condom Use at Last Sex (if vaginal),NSFG male respondent
+dateapp,dateapp    KK-3a Had sex with anyone they first met on the internet in past 12 months,NSFG male respondent
+attract,attract    KK-4 R's Sexual Attraction to Males vs Females,NSFG male respondent
+ORIENT_A,ORIENT_A   KK-5a R s Sexual Orientation random 1/2 sample,NSFG male respondent
+ORIENT_B,ORIENT_B   KK-5b R s Sexual Orientation random 1/2 sample,NSFG male respondent
+confconc,confconc   KK-6a Not go for sexual or reproductive health care because your parents might f,NSFG male respondent
+timalon,timalon    KK-6b Dr ever spend any time alone with you without a parent,NSFG male respondent
+RISKCHEK1,KK-6c Dr ever asked R about sexual orientation or sex of his partners,NSFG male respondent
+RISKCHEK2,KK-6d Dr ever asked R about his number of sexual partners,NSFG male respondent
+RISKCHEK3,KK-6e Dr ever asked R about his use of condoms,NSFG male respondent
+RISKCHEK4,KK-6f Dr ever asked R about the types of sex he has,NSFG male respondent
+rectdouch,KK-6g Rectal douching in last 12 months,NSFG male respondent
+STDTST12,STDTST12   KK-7 Last 12 months: R Tested for STD,NSFG male respondent
+STDSITE12,KK-7b R had pharyngeal or rectal STD testing in the past year,NSFG male respondent
+STDTRT12,STDTRT12   KK-8 Last 12 months: R Treated for STD,NSFG male respondent
+gon,gon        KK-9 Last 12 months: R told he had gonorrhea,NSFG male respondent
+chlam,chlam      KK-10 Last 12 months: R told he had chlamydia,NSFG male respondent
+herpes,herpes     KK-11 R ever told he had genital herpes,NSFG male respondent
+genwarts,genwarts   KK-12 R ever told he had genital warts,NSFG male respondent
+syphilis,syphilis   KK-13 R ever told he had syphilis,NSFG male respondent
+evrinject,KK-14 Ever Injected Non-Prescription Drugs in Lifetime,NSFG male respondent
+evrshare,evrshare   KK-15 Ever (in life) Shared an IV Needle,NSFG male respondent
+VAGNUM12,VAGNUM12   KG-2YRa # female partners past 12 months had vaginal sex with,NSFG male respondent
+ORALNUM12,"KG-2YRb # female partners past 12 months had oral sex with, either giving or rec",NSFG male respondent
+ANALNUM12,KG-2YRc # female partners past 12 months had anal sex with,NSFG male respondent
+nonmonog,nonmonog   KG-4 Last 12 months: R Had Sex w/Female Having Sex With Others,NSFG male respondent
+NNONMONOG1,KG-5a Number of female partners in last year who were having sex with others,NSFG male respondent
+NNONMONOG2,KG-5b Number of other partners R's 1 partner in last year had at same time,NSFG male respondent
+NNONMONOG3,KG-5c Number of other partners R's most recent partner in last year had at same,NSFG male respondent
+FEMSHT12,FEMSHT12   KG-6 Last 12 months: R had sex w/female intravenous drug user,NSFG male respondent
+johnfreq,johnfreq   KG-7 Last 12 months: R gave money or drugs to female for sex,NSFG male respondent
+prostfrq,prostfrq   KG-8 Last 12 months: R took money or drugs from female for sex,NSFG male respondent
+HIVFEM12,HIVFEM12   KG-9 Last 12 months: R had sex with an HIV-positive female,NSFG male respondent
+opplifenum,Number of opposite-sex partners in lifetime for all types of sex. (computed in F,NSFG male respondent
+oppyearnum,Number of opposite-sex partners in last 12 months for all types of sex (computed,NSFG male respondent
+femtouch,femtouch   KE-1 R ever touched by female and ejaculated,NSFG male respondent
+vagsex,vagsex     KE-2 Ever had vaginal intercourse,NSFG male respondent
+agevagr,agevagr    KE-2b R's age at first vaginal intercourse,NSFG male respondent
+condvag,condvag    KE-3 Was condom used at last vaginal sex,NSFG male respondent
+COND1BRK,COND1BRK   KE-3a Did condom break,NSFG male respondent
+COND1OFF,COND1OFF   KE-3b When was the condom used,NSFG male respondent
+whycondl,whycondl   KE-4 Reason for condom use at last vaginal sex,NSFG male respondent
+getoralf,getoralf   KE-5 R has ever received oral sex from a female,NSFG male respondent
+condfell,condfell   KE-6 Was condom used when last received oral sex from a female,NSFG male respondent
+givoralf,givoralf   KE-7 R has ever performed oral sex on a female,NSFG male respondent
+timing,timing     KE-7b oral sex before or after vaginal sex,NSFG male respondent
+analsex,analsex    KE-8 R ever had anal sex with a female,NSFG male respondent
+condanal,condanal   KE-9 Was condom used when last had anal sex with a female,NSFG male respondent
+condsexl,condsexl   KE-10 Was condom used at last sex of any kind with a female,NSFG male respondent
+anyoral,anyoral    Whether R has ever had oral sex (either type) with an opposite-sex (female) part,NSFG male respondent
+oppsexany,"Ever had vaginal, oral or anal sex with a female",NSFG male respondent
+oppsexgen,Ever had male-genital-involving sex with a female,NSFG male respondent
+SMK100,SMK100     KC-0a1 Has R Smoked at Least 100 Cigarettes in Life,NSFG male respondent
+agesmk,agesmk     KC-0a2 Age That R First Began Smoking Regularly,NSFG male respondent
+SMOKE12,SMOKE12    KC-0a3 Last 12 mos: How Often R Smoked Cigarettes,NSFG male respondent
+smkstop,smkstop    KC-0a4 Was R provided with counseling to stop smoking,NSFG male respondent
+DRINK12,DRINK12    KC-1 Last 12 months: How Often Drank Alcoholic Beverages,NSFG male respondent
+UNIT30D,UNIT30D    KC-1a-U Drinking in past 30 days - unit of response,NSFG male respondent
+DRINK30D,DRINK30D   KC-1a-N Drinking in past 30 days - amount,NSFG male respondent
+drinkday,drinkday   KC-1b Number of drinks R had on average on days R drank,NSFG male respondent
+BINGE30,BINGE30    KC-1c Number of times R binge-drank in past 30 days,NSFG male respondent
+drnkmost,drnkmost   KC-1d Largest number of drinks R had on any occasion in past 30 days,NSFG male respondent
+BINGE12,BINGE12    KC-2 Last 12 months: How Often Binge Drank (5+ in Couple of Hours),NSFG male respondent
+POT12,POT12      KC-3 Last 12 months: How Often Smoked Marijuana,NSFG male respondent
+COC12,COC12      KC-4 Last 12 months: How Often Used Cocaine,NSFG male respondent
+CRACK12,CRACK12    KC-5 Last 12 months: How Often Used Crack,NSFG male respondent
+CRYSTMTH12,KC-5a Last 12 months: How Often Used Crystal/Meth,NSFG male respondent
+INJECT12,INJECT12   KC-6 Last 12 months: How Often Injected Non-Prescription Drugs,NSFG male respondent
+SAMESEX1,SAMESEX1   KJ-3 R s age at first sexual experience with same-sex (male) partner,NSFG male respondent
+donblood,donblood   IF-1 Has R Ever Donated Blood or Blood Products,NSFG male respondent
+hivtest,hivtest    IF-2 Any HIV test outside of blood donation,NSFG male respondent
+nohivtst,nohivtst   IF-2b R's main reason for never having had an HIV test,NSFG male respondent
+WHENHIV_M,IF-3 Month of most recent HIV test,NSFG male respondent
+WHENHIV_Y,IF-3 Year of most recent HIV test,NSFG male respondent
+hivtstyr,hivtstyr   IF-3b Has R had HIV test in last 12 months,NSFG male respondent
+hivresult,IF-3d Whether R found out results of last HIV test,NSFG male respondent
+whynoget,whynoget   IF-3e Main reason why R did not get results of last HIV test,NSFG male respondent
+plchiv,plchiv     IF-4 Place where R had last HIV test,NSFG male respondent
+RHHIVT1,RHHIVT1    IF-4a Used a rapid home HIV test,NSFG male respondent
+RHHIVT21,RHHIVT21   IF-4b Reasons for rapid home HIV test - 1st mentioned,NSFG male respondent
+RHHIVT22,RHHIVT22   IF-4b Reasons for rapid home HIV test - 2nd mentioned,NSFG male respondent
+RHHIVT23,RHHIVT23   IF-4b Reasons for rapid home HIV test - 3rd mentioned,NSFG male respondent
+RHHIVT24,RHHIVT24   IF-4b Reasons for rapid home HIV test - 4th mentioned,NSFG male respondent
+RHHIVT25,RHHIVT25   IF-4b Reasons for rapid home HIV test - 5th mentioned,NSFG male respondent
+hivtst,hivtst     IF-5 Reason for this (last) HIV test- 1st mention,NSFG male respondent
+prephiv,prephiv    IF-5c Has R heard about PrEP medications,NSFG male respondent
+talkdoct,talkdoct   IF-6 Has a doctor ever talked with R about HIV/AIDS,NSFG male respondent
+AIDSTALK01,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 1st mention,NSFG male respondent
+AIDSTALK02,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 2nd mention,NSFG male respondent
+AIDSTALK03,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 3rd mention,NSFG male respondent
+AIDSTALK04,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 4th mention,NSFG male respondent
+AIDSTALK05,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 5th mention,NSFG male respondent
+AIDSTALK06,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 6th mention,NSFG male respondent
+AIDSTALK07,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 7th mention,NSFG male respondent
+AIDSTALK08,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 8th mention,NSFG male respondent
+AIDSTALK09,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 9th mention,NSFG male respondent
+AIDSTALK10,IF-7 HIV Topics Covered in Discussion with Doctor/Provider - 10th mention,NSFG male respondent
+AIDSTALK11,IF-7 HIV topics covered in post-test counseling - 11th mention,NSFG male respondent
+cmhivtst,cmhivtst   CM of last/most recent HIV test,NSFG male respondent
+SXMON12,SXMON12    BC-7 Has R had sex in last 12 mos (if only 1 partner in life),NSFG male respondent
+P12MOCONO,BC-8a use a condom that time,NSFG male respondent
+P12MOCON,P12MOCON   BC-8b How many times used condom during sex last 12 mons,NSFG male respondent
+sexfreq,sexfreq    BC-9 # times had sex with female in last 4 weeks,NSFG male respondent
+confreq,confreq    BC-10 # times used condom when had sex with female in last 4 wks,NSFG male respondent
+sexstat,sexstat    Summary of R's lifetime and recent sexual experience,NSFG male respondent
+eversex,eversex    BA-1 Ever had sexual intercourse with a female,NSFG male respondent
+sxmtonce,sxmtonce   BA-2 Has R had sexual intercourse more than once,NSFG male respondent
+ynosex,ynosex     BA-3 Main Reason Why R Has Not Had Intercourse with a Female,NSFG male respondent
+TALKPAR1,TALKPAR1   BA-4 Sex Ed Topics R Has Discussed with Parents -1st Mention,NSFG male respondent
+TALKPAR2,TALKPAR2   BA-4 Sex Ed Topics R Has Discussed with Parents -2nd Mention,NSFG male respondent
+TALKPAR3,TALKPAR3   BA-4 Sex Ed Topics R Has Discussed with Parents -3rd Mention,NSFG male respondent
+TALKPAR4,TALKPAR4   BA-4 Sex Ed Topics R Has Discussed with Parents -4th Mention,NSFG male respondent
+TALKPAR5,TALKPAR5   BA-4 Sex Ed Topics R Has Discussed with Parents -5th Mention,NSFG male respondent
+TALKPAR6,TALKPAR6   BA-4 Sex Ed Topics R Has Discussed with Parents -6th Mention,NSFG male respondent
+TALKPAR7,TALKPAR7   BA-4 Sex Ed Topics R Has Discussed with Parents -7th Mention,NSFG male respondent
+sedno,sedno      BA-5 Formal Sex Ed Before 18: How to Say No to Sex,NSFG male respondent
+SEDNOLC1,SEDNOLC1   BA-5a Place where received instructions on how to say no to sex-1st Mention,NSFG male respondent
+SEDNOLC2,SEDNOLC2   BA-5a Place where received instructions on how to say no to sex-2nd Mention,NSFG male respondent
+SEDNOLC3,SEDNOLC3   BA-5a Place where received instructions on how to say no to sex-3rd Mention,NSFG male respondent
+SEDNOLC4,SEDNOLC4   BA-5a Place where received instructions on how to say no to sex-4th Mention,NSFG male respondent
+sednog,sednog     BA-6 Grade R Received Sex Ed on How to Say No to Sex,NSFG male respondent
+sednosx,sednosx    BA-7 R rec'd instruction-how say no to sex before/after 1st sex?,NSFG male respondent
+sedbc,sedbc      BA-8 Formal Sex Ed Before 18: Methods of Birth Control,NSFG male respondent
+SEDBCLC1,SEDBCLC1   BA-8a Place where received instructions on methods of birth control-1st Mention,NSFG male respondent
+SEDBCLC2,SEDBCLC2   BA-8a Place where received instructions on methods of birth control-2nd Mention,NSFG male respondent
+SEDBCLC3,SEDBCLC3   BA-8a Place where received instructions on methods of birth control-3rd Mention,NSFG male respondent
+SEDBCLC4,SEDBCLC4   BA-8a Place where received instructions on methods of birth control-4th Mention,NSFG male respondent
+sedbcg,sedbcg     BA-9 R's Grade When Received Instruction on Birth Control,NSFG male respondent
+sedbcsx,sedbcsx    BA-10 R rec'd instruction-birth control before/after 1st sex?,NSFG male respondent
+sedwhbc,sedwhbc    BA-11 Formal Sex Ed Before 18: Where to Get Birth Control,NSFG male respondent
+SEDWHLC1,SEDWHLC1   BA-11a Place where received instructions on where to get birth control-1st Menti,NSFG male respondent
+SEDWHLC2,SEDWHLC2   BA-11a Place where received instructions on where to get birth control-2nd Menti,NSFG male respondent
+SEDWHLC3,SEDWHLC3   BA-11a Place where received instructions on where to get birth control-3rd Menti,NSFG male respondent
+SEDWHLC4,SEDWHLC4   BA-11a Place where received instructions on where to get birth control-4th Menti,NSFG male respondent
+sedwhbcg,sedwhbcg   BA-12 R's Grade When Received Instruction on Where to Get Birth Control,NSFG male respondent
+sedwbcsx,sedwbcsx   BA-13 R rec'd Instruction-Where to Get Birth Control before/after 1st sex,NSFG male respondent
+sedcond,sedcond    BA-14 Formal Sex Ed Before 18: How to Use a Condom,NSFG male respondent
+SEDCONLC1,BA-14a Place where received instructions on how to use a condom-1st Mention,NSFG male respondent
+SEDCONLC2,BA-14a Place where received instructions on how to use a condom-2nd Mention,NSFG male respondent
+SEDCONLC3,BA-14a Place where received instructions on how to use a condom-3rd Mention,NSFG male respondent
+SEDCONLC4,BA-14a Place where received instructions on how to use a condom-4th Mention,NSFG male respondent
+sedcondg,sedcondg   BA-15 R's Grade When Received Instruction on How to Use a Condom,NSFG male respondent
+sedconsx,sedconsx   BA-16 R rec'd Instruction-How to Use a Condom before/after 1st sex,NSFG male respondent
+sedstd,sedstd     BA-17 Formal Sex Ed Before 18: STDs,NSFG male respondent
+SEDSTDLC1,BA-17a Place where received instructions on sexually transmitted diseases-1st Me,NSFG male respondent
+SEDSTDLC2,BA-17a Place where received instructions on sexually transmitted diseases-2nd Me,NSFG male respondent
+SEDSTDLC3,BA-17a Place where received instructions on sexually transmitted diseases-3rd Me,NSFG male respondent
+SEDSTDLC4,BA-17a Place where received instructions on sexually transmitted diseases-4th Me,NSFG male respondent
+sedstdg,sedstdg    BA-18 R's Grade When Received Instruction on STDs,NSFG male respondent
+sedstdsx,sedstdsx   BA-19 R rec'd instruction on STDs before/after 1st sex?,NSFG male respondent
+sedhiv,sedhiv     BA-20 Formal Sex Ed Before 18: how prevent HIV/AIDS,NSFG male respondent
+SEDHIVLC1,BA-20a Place where received instructions on how to prevent HIV/AIDS-1st Mention,NSFG male respondent
+SEDHIVLC2,BA-20a Place where received instructions on how to prevent HIV/AIDS-2nd Mention,NSFG male respondent
+SEDHIVLC3,BA-20a Place where received instructions on how to prevent HIV/AIDS-3rd Mention,NSFG male respondent
+SEDHIVLC4,BA-20a Place where received instructions on how to prevent HIV/AIDS-4th Mention,NSFG male respondent
+sedhivg,sedhivg    BA-21 R's Grade When Received Instruction on how prevent HIV/AIDS,NSFG male respondent
+sedhivsx,sedhivsx   BA-22 R's instruction on how prevent HIV/AIDS before/after 1st sex?,NSFG male respondent
+sedabst,sedabst    BA-23 Formal Sex Ed Before 18: Waiting Until Marriage,NSFG male respondent
+SEDABLC1,SEDABLC1   BA-23a Place where received instruction about waiting until marriage to have sex,NSFG male respondent
+SEDABLC2,SEDABLC2   BA-23a Place where received instruction about waiting until marriage to have sex,NSFG male respondent
+SEDABLC3,SEDABLC3   BA-23a Place where received instruction about waiting until marriage to have sex,NSFG male respondent
+SEDABLC4,SEDABLC4   BA-23a Place where received instruction about waiting until marriage to have sex,NSFG male respondent
+sedabstg,sedabstg   BA-24 R s Grade When Received Instruction on Waiting Until Marriage,NSFG male respondent
+sedabssx,sedabssx   BA-25 R rec d instruction-Waiting Until Marriage before/after 1st sex,NSFG male respondent
+rhadsex,rhadsex    Whether R Has Ever Had Sex (Vaginal Intercourse),NSFG male respondent
+ager,ager       R's age at interview (RECODE),NSFG male respondent
+fmarital,fmarital   Formal (legal) marital status (RECODE),NSFG male respondent
+rmarital,rmarital   Informal marital status (RECODE),NSFG male respondent
+hieduc,hieduc     Highest completed year of school or highest degree received (RECODE),NSFG male respondent
+hispanic,hispanic   Hispanic origin of respondent (RECODE),NSFG male respondent
+race,race       Race of respondent (RECODE),NSFG male respondent
+WGT2017_2019,Final weight for the 2017-2019 NSFG,NSFG male respondent
+secu,secu       Randomized version of the sampling error computational unit,NSFG male respondent
+sest,Randomized version of the stratum,NSFG male respondent
+ager,R's age at interview (RECODE),NSFG female respondent
+fmarital,Formal (legal) marital status (RECODE),NSFG female respondent
+rmarital,Informal marital status (RECODE),NSFG female respondent
+hieduc,Highest completed year of school or highest degree received (RECODE),NSFG female respondent
+hispanic,Hispanic origin of respondent (RECODE),NSFG female respondent
+race,Race of respondent (RECODE),NSFG female respondent
+caseid,Respondent ID number,NSFG female respondent
+sedhiv,CF-17 Formal Sex Ed Before 18: HIV/AIDS,NSFG female respondent
+SEDHIVLC1,CF-17a Place where received instructions on how to prevent HIV/AIDS-1st Mention,NSFG female respondent
+SEDHIVLC2,CF-17a Place where received instructions on how to prevent HIV/AIDS-2nd Mention,NSFG female respondent
+SEDHIVLC3,CF-17a Place where received instructions on how to prevent HIV/AIDS-3rd Mention,NSFG female respondent
+SEDHIVLC4,CF-17a Place where received instructions on how to prevent HIV/AIDS-4th Mention,NSFG female respondent
+sedhivg,CF-18 Grade R 1st Received Sex Ed on HIV/AIDS,NSFG female respondent
+sedhivsx,CF-19 Received Sex Ed on HIV/AIDS before/after 1st sex,NSFG female respondent
+hivtest,HE-2 Any HIV Test Outside of Blood Donation,NSFG female respondent
+nohivtst,HE-2b R's main reason for never having had an HIV test,NSFG female respondent
+WHENHIV_M,HE-3 Month of Most Recent HIV Test,NSFG female respondent
+WHENHIV_Y,HE-3 Year of Most Recent HIV Test,NSFG female respondent
+cmhivtst,Date (CM) of Last (or Most Recent) HIV Test,NSFG female respondent
+hivtstyr,HE-3b Has R had HIV test in last 12 months,NSFG female respondent
+hivresult,HE-3d Whether R found out results of last HIV test,NSFG female respondent
+whynoget,HE-3e Main reason why R did not get results of last HIV test,NSFG female respondent
+plchiv,HE-4 Place Where R Had Last HIV Test,NSFG female respondent
+RHHIVT1,HE-4j Used a rapid home HIV test,NSFG female respondent
+RHHIVT21,HE-4k Reasons for rapid home HIV test - 1st mentioned,NSFG female respondent
+RHHIVT22,HE-4k Reasons for rapid home HIV test - 2nd mentioned,NSFG female respondent
+hivtst,HE-5 Reason For This Last HIV Test-1st mention,NSFG female respondent
+prephiv,HE-5c Has R heard about PrEP medications,NSFG female respondent
+talkdoct,HE-6 Has a doctor ever talked with R about HIV/AIDS,NSFG female respondent
+AIDSTALK01,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-1st mention,NSFG female respondent
+AIDSTALK02,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-2nd mention,NSFG female respondent
+AIDSTALK03,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-3rd mention,NSFG female respondent
+AIDSTALK04,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-4th mention,NSFG female respondent
+AIDSTALK05,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-5th mention,NSFG female respondent
+AIDSTALK06,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-6th mention,NSFG female respondent
+AIDSTALK07,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-7th mention,NSFG female respondent
+AIDSTALK08,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-8th mention,NSFG female respondent
+AIDSTALK09,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-9th mention,NSFG female respondent
+AIDSTALK10,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-10th mention,NSFG female respondent
+AIDSTALK11,HE-7 HIV Topics Covered in Discussion with Doctor/Provider-11th mention,NSFG female respondent
+vagsex,JD-1 Ever Had Vaginal Intercourse with a Male,NSFG female respondent
+agevagr,JD-2 R's Age at First Vaginal Intercourse with a Male,NSFG female respondent
+condvag,JD-4 R Used Condom at Last Vaginal Intercourse with a Male,NSFG female respondent
+whycondl,JD-5 Reason R Used Condom at Last Vaginal Intercourse w/a Male,NSFG female respondent
+getoralm,JD-6 R has ever received oral sex from a male,NSFG female respondent
+givoralm,JD-7 R has ever performed oral sex on a male,NSFG female respondent
+condfell,JD-8 R Used Condom at Last Oral Sex with a Male,NSFG female respondent
+timing,"JD-8b First oral sex before, after, or during first vag sex?",NSFG female respondent
+analsex,JD-9 R Ever Had Anal Sex with a Male,NSFG female respondent
+condanal,JD-10 R Used Condom at Last Anal Sex with a Male,NSFG female respondent
+condsexl,JD-11 R Used Condom at Last Sex (any type) with a Male,NSFG female respondent
+anyoral,Whether R has ever had oral sex with a male (computed in FC J-8b),NSFG female respondent
+oppsexany,"Ever Had Vaginal, Oral, or Anal Sex with a Male (computed in FC J-9)",NSFG female respondent
+oppsexgen,Ever Had Male-Genital-Involving Sex with a Male (computed in FC J-9),NSFG female respondent
+givoralf,JG-1a R performed oral sex on another female?,NSFG female respondent
+getoralf,JG-1b Another female ever performed oral sex on R?,NSFG female respondent
+femsex,JG-1c R ever had sexual experience with a female,NSFG female respondent
+SAMESEX1,JG-4 R's age at first sexual experience with same-sex (female) partner,NSFG female respondent
+fsamerel,JG-4a R s relationship with 1st female partner at time of 1st sex with her,NSFG female respondent
+samesexany,Ever Had Sexual Contact with a Female (computed in FC J-19),NSFG female respondent
+samlifenum,Number of same-sex partners in lifetime (computed in FC J-19d),NSFG female respondent
+samyearnum,Number of same-sex partners in last 12 months (computed in FC J-19f),NSFG female respondent
+mflastp,JH-1 Was R's Last Sex Partner Male or Female,NSFG female respondent
+dateapp,JH-1a Had sex with anyone they first met on the internet in past 12 months,NSFG female respondent
+attract,JH-2 R's Sexual Attraction to Males vs Females,NSFG female respondent
+ORIENT_A,JH-3 R s Sexual Orientation random 1/2 sample,NSFG female respondent
+ORIENT_B,JH-3b R s Sexual Orientation random 1/2 sample,NSFG female respondent
+confconc,JH-3a Not go for sexual or reproductive health care because your parents might f,NSFG female respondent
+timalon,JH-3b Dr ever spend any time alone with you without a parent,NSFG female respondent
+RISKCHEK1,JH-3c Dr ever asked R about sexual orientation or sex of her partners,NSFG female respondent
+RISKCHEK2,JH-3d Dr ever asked R about her number of sexual partners,NSFG female respondent
+RISKCHEK3,JH-3e Dr ever asked R about her use of condoms,NSFG female respondent
+RISKCHEK4,JH-3f Dr ever asked R about the types of sex she has,NSFG female respondent
+chlamtst,,NSFG female respondent
+STDOTHR12,JH-4b STD testing (other than chlamydia) in last 12 months,NSFG female respondent
+STDTRT12,JH-5 Last 12 months: R treated for any STD,NSFG female respondent
+gon,JH-6 Last 12 months: R told she had gonorrhea,NSFG female respondent
+chlam,JH-7 Last 12 months: R told she had chlamydia,NSFG female respondent
+herpes,JH-8 R ever (in life) told she had genital herpes,NSFG female respondent
+genwarts,JH-9 R ever (in life) told she had genital warts,NSFG female respondent
+syphilis,JH-10 R ever (in life) told she had syphilis,NSFG female respondent
+evrinject,JH-11 Ever injected non-prescription drugs in lifetime,NSFG female respondent
+evrshare,JH-12 Ever (In Life) Shared an IV Needle,NSFG female respondent
+TALKPAR1,CF-1 Sex Ed Topics R Has Discussed with Parents -1st Mention,NSFG female respondent
+TALKPAR2,CF-1 Sex Ed Topics R Has Discussed with Parents -2nd Mention,NSFG female respondent
+TALKPAR3,CF-1 Sex Ed Topics R Has Discussed with Parents -3rd Mention,NSFG female respondent
+TALKPAR4,CF-1 Sex Ed Topics R Has Discussed with Parents -4th Mention,NSFG female respondent
+TALKPAR5,CF-1 Sex Ed Topics R Has Discussed with Parents -5th Mention,NSFG female respondent
+TALKPAR6,CF-1 Sex Ed Topics R Has Discussed with Parents -6th Mention,NSFG female respondent
+TALKPAR7,CF-1 Sex Ed Topics R Has Discussed with Parents -7th Mention,NSFG female respondent
+sedno,CF-2 Formal Sex Ed Before 18: How to Say No to Sex,NSFG female respondent
+SEDNOLC1,CF-2a Place where received instructions on how to say no to sex-1st Mention,NSFG female respondent
+SEDNOLC2,CF-2a Place where received instructions on how to say no to sex-2nd Mention,NSFG female respondent
+SEDNOLC3,CF-2a Place where received instructions on how to say no to sex-3rd Mention,NSFG female respondent
+SEDNOLC4,CF-2a Place where received instructions on how to say no to sex-4th Mention,NSFG female respondent
+sednog,CF-3 Grade R Received Sex Ed on How to Say No to Sex,NSFG female respondent
+sednosx,CF-4 Rec d Sex Ed on How to Say No to Sex Before/After 1st Sex,NSFG female respondent
+sedbc,CF-5 Formal Sex Ed Before 18: Methods of Birth Control,NSFG female respondent
+SEDBCLC1,CF-5a Place where received instruction about methods of birth control-1st Mentio,NSFG female respondent
+SEDBCLC2,CF-5a Place where received instruction about methods of birth control-2nd Mentio,NSFG female respondent
+SEDBCLC3,CF-5a Place where received instruction about methods of birth control-3rd Mentio,NSFG female respondent
+SEDBCLC4,CF-5a Place where received instruction about methods of birth control-4th Mentio,NSFG female respondent
+sedbcg,CF-6 R's Grade When Received Instruction on Birth Control,NSFG female respondent
+sedbcsx,CF-7 Rec d Sex Ed on Birth Control Methods Before/After 1st Sex,NSFG female respondent
+sedwhbc,CF-8 Formal Sex Ed Before 18: Where to Get Birth Control,NSFG female respondent
+SEDWHLC1,CF-8A Place where received instructions on where to get birth control-1st Mentio,NSFG female respondent
+SEDWHLC2,CF-8A Place where received instructions on where to get birth control-2nd Mentio,NSFG female respondent
+SEDWHLC3,CF-8A Place where received instructions on where to get birth control-3rd Mentio,NSFG female respondent
+SEDWHLC4,CF-8A Place where received instructions on where to get birth control-4th Mentio,NSFG female respondent
+sedwhbcg,CF-9 R's Grade When Received Instruction on Where to Get Birth Control,NSFG female respondent
+sedwbcsx,CF-10 R rec d Instruction-Where to Get Birth Control before/after 1st sex,NSFG female respondent
+sedcond,CF-11 Formal Sex Ed Before 18: How to Use a Condom,NSFG female respondent
+SEDCONLC1,CF-11a Place where received instructions on how to use a condom-1st Mention,NSFG female respondent
+SEDCONLC2,CF-11a Place where received instructions on how to use a condom-2nd Mention,NSFG female respondent
+SEDCONLC3,CF-11a Place where received instructions on how to use a condom-3rd Mention,NSFG female respondent
+SEDCONLC4,CF-11a Place where received instructions on how to use a condom-4th Mention,NSFG female respondent
+sedcondg,CF-12 R's Grade When Received Instruction on How to Use a Condom,NSFG female respondent
+sedconsx,CF-13 R rec d Instruction-How to Use a Condom before/after 1st sex,NSFG female respondent
+sedstd,CF-14 Formal Sex Ed Before 18: STD,NSFG female respondent
+SEDSTDLC1,CF-14a Place where received instructions on sexually transmitted diseases-1st Me,NSFG female respondent
+SEDSTDLC2,CF-14a Place where received instructions on sexually transmitted diseases-2nd Me,NSFG female respondent
+SEDSTDLC3,CF-14a Place where received instructions on sexually transmitted diseases-3rd Me,NSFG female respondent
+SEDSTDLC4,CF-14a Place where received instructions on sexually transmitted diseases-4th Me,NSFG female respondent
+sedstdg,CF-15 Grade R 1st Received Sex Ed on STDs,NSFG female respondent
+sedstdsx,CF-16 Received Sex Ed on STD before/after 1st sex,NSFG female respondent
+sedhiv,CF-17 Formal Sex Ed Before 18: HIV/AIDS,NSFG female respondent
+SEDHIVLC1,CF-17a Place where received instructions on how to prevent HIV/AIDS-1st Mention,NSFG female respondent
+SEDHIVLC2,CF-17a Place where received instructions on how to prevent HIV/AIDS-2nd Mention,NSFG female respondent
+SEDHIVLC3,CF-17a Place where received instructions on how to prevent HIV/AIDS-3rd Mention,NSFG female respondent
+SEDHIVLC4,CF-17a Place where received instructions on how to prevent HIV/AIDS-4th Mention,NSFG female respondent
+sedhivg,CF-18 Grade R 1st Received Sex Ed on HIV/AIDS,NSFG female respondent
+sedhivsx,CF-19 Received Sex Ed on HIV/AIDS before/after 1st sex,NSFG female respondent
+sedabst,CF-20 Formal Sex Ed Before 18: Waiting Until Marriage,NSFG female respondent
+SEDABLC1,CF-20a Place where received instruction about waiting until marriage to have sex,NSFG female respondent
+SEDABLC2,CF-20a Place where received instruction about waiting until marriage to have sex,NSFG female respondent
+SEDABLC3,CF-20a Place where received instruction about waiting until marriage to have sex,NSFG female respondent
+SEDABLC4,CF-20a Place where received instruction about waiting until marriage to have sex,NSFG female respondent
+sedabstg,CF-21 R's Grade When Received Instruction on Waiting Until Marriage,NSFG female respondent
+sedabssx,CF-22 R rec d instruction-Waiting Until Marriage before/after 1st sex,NSFG female respondent
+onown,AG-0a Did R ever live away from parents/guardians before age 18,NSFG female respondent
+ONOWN18,Whether R lived on own before age 18,NSFG female respondent
+eversex,CE-1 Ever Had Sexual Intercourse with a Man,NSFG female respondent
+rhadsex,Whether R Has Ever Had Sex (Vaginal Intercourse),NSFG female respondent
+ynosex,CE-2 Main Reason R Has Not Had Sex With a Man,NSFG female respondent
+grfstsx,CE-8 Grade R Was in at First Sexual Intercourse,NSFG female respondent
+sxmtonce,CE-9 Has R Had Sexual Intercourse More Than Once,NSFG female respondent
+methdiss,EA-16 R ever stop using method because dissatisfied with it,NSFG female respondent
+whencond,EA-18e If discontinued condom within past 12 months,NSFG female respondent
+REASCOND01,EA-19 Reason not satisfied with condom - 1st mention,NSFG female respondent
+REASCOND02,EA-19 Reason not satisfied with condom - 2nd mention,NSFG female respondent
+REASCOND03,EA-19 Reason not satisfied with condom - 3rd mention,NSFG female respondent
+REASCOND04,EA-19 Reason not satisfied with condom - 4th mention,NSFG female respondent
+REASCOND05,EA-19 Reason not satisfied with condom - 5th mention,NSFG female respondent
+REASCOND06,EA-19 Reason not satisfied with condom - 6th mention,NSFG female respondent
+REASCOND07,EA-19 Reason not satisfied with condom - 7th mention,NSFG female respondent
+vagsex,JD-1 Ever Had Vaginal Intercourse with a Male,NSFG female respondent
+agevagr,JD-2 R's Age at First Vaginal Intercourse with a Male,NSFG female respondent
+condvag,JD-4 R Used Condom at Last Vaginal Intercourse with a Male,NSFG female respondent
+whycondl,JD-5 Reason R Used Condom at Last Vaginal Intercourse w/a Male,NSFG female respondent
+getoralm,JD-6 R has ever received oral sex from a male,NSFG female respondent
+givoralm,JD-7 R has ever performed oral sex on a male,NSFG female respondent
+condfell,JD-8 R Used Condom at Last Oral Sex with a Male,NSFG female respondent
+timing,"JD-8b First oral sex before, after, or during first vag sex?",NSFG female respondent
+analsex,JD-9 R Ever Had Anal Sex with a Male,NSFG female respondent
+condanal,JD-10 R Used Condom at Last Anal Sex with a Male,NSFG female respondent
+condsexl,JD-11 R Used Condom at Last Sex (any type) with a Male,NSFG female respondent
+anyoral,Whether R has ever had oral sex with a male (computed in FC J-8b),NSFG female respondent
+oppsexany,"Ever Had Vaginal, Oral, or Anal Sex with a Male (computed in FC J-9)",NSFG female respondent
+oppsexgen,Ever Had Male-Genital-Involving Sex with a Male (computed in FC J-9),NSFG female respondent
+VAGNUM12,JF-2YRa # male partners past 12 months had vaginal intercourse with,NSFG female respondent
+ORALNUM12,JF-2YRb # male partners past 12 months had oral sex with,NSFG female respondent
+ANALNUM12,JF-2YRc # male partners past 12 months had anal sex with,NSFG female respondent
+bisexprt,JF-3 Last 12 months: R Had Sex w/Male Who Ever Had Sex w/Males,NSFG female respondent
+nonmonog,JF-4 Last 12 months: R Had Sex w/Male Who Had Other Partners,NSFG female respondent
+NNONMONOG1,JF-5a Number of male partners in last year who were having sex with others,NSFG female respondent
+NNONMONOG2,JF-5b Number of other partners R's 1 partner in last year had at same time,NSFG female respondent
+NNONMONOG3,JF-5c Number of other partners R's most recent partner in last year had at same,NSFG female respondent
+MALSHT12,JF-6 Last 12 months: R had sex w/male intravenous drug user,NSFG female respondent
+prostfrq,JF-7 Last 12 months: R took money or drugs from male for sex,NSFG female respondent
+johnfreq,JF-8 Last 12 months: R gave money or drugs to male for sex,NSFG female respondent
+HIVMAL12,JF-9 Last 12 months: R had sex with an HIV-positive male,NSFG female respondent
+opplifenum,Number of opposite-sex partners in lifetime for all types of sex (computed in FC,NSFG female respondent
+oppyearnum,Number of opposite-sex partners in last 12 months for all types of sex. (compute,NSFG female respondent
+nobedyr,"JC-0a R had to stay overnight in a shelter, car or someplace outdoors",NSFG female respondent
+stayrel,JC-0b R had to stay overnight with a friend or relative,NSFG female respondent
+evsuspen,JC-0c Ever been suspended or expelled from school?,NSFG female respondent
+gradsusp,JC-0d Grade when suspended or expelled from school,NSFG female respondent
+SMK100,JC-1 Has R Smoked at Least 100 Cigarettes in Life,NSFG female respondent
+agesmk,JC-2 Age That R First Began Smoking Regularly,NSFG female respondent
+SMOKE12,JC-3 Last 12 months: How Often R Smoked Cigarettes,NSFG female respondent
+smkstop,JC-3a Was R provided with counseling to stop smoking,NSFG female respondent
+DRINK12,JC-4 Last 12 months: How Often Drank Alcoholic Beverages,NSFG female respondent
+UNIT30D,JC-4a-U Drinking in past 30 days - unit of response,NSFG female respondent
+DRINK30D,JC-4a-N Drinking in past 30 days - amount,NSFG female respondent
+drinkday,JC-4b Number of drinks R had on average on days R drank,NSFG female respondent
+BINGE30,JC-4c Number of times R binge-drank in past 30 days,NSFG female respondent
+drnkmost,JC-4d Largest number of drinks R had on any occasion in past 30 days,NSFG female respondent
+BINGE12,JC-5 Last 12 months: How Often Binge Drank (4+ in Couple of Hours),NSFG female respondent
+POT12,JC-6 Last 12 months: How Often Smoked Marijuana,NSFG female respondent
+COC12,JC-7 Last 12 months: How Often Used Cocaine,NSFG female respondent
+CRACK12,JC-8 Last 12 months: How Often Used Crack,NSFG female respondent
+CRYSTMTH12,JC-8a Last 12 months: How Often Used Crystal/Meth,NSFG female respondent
+INJECT12,JC-9 Last 12 months: How Often Injected Non-Prescription Drugs,NSFG female respondent
+WGT2017_2019,Final weight for the 2017-2019 NSFG,NSFG female respondent
+secu,Randomized version of the sampling error computational unit,NSFG female respondent
+sest,Randomized version of the stratum,NSFG female respondent

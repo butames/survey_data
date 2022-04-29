@@ -1,0 +1,81 @@
+---
+title: "Cleaning NSFG Data"
+subtitle: 'Notebook to clean NSFG 2017-2019 data'
+author: "Seyram A. Butame"
+date: "April 2022"
+output:
+  html_notebook:
+    toc: yes
+    number_sections: yes
+    toc_float: yes
+    smooth_scroll: true
+---
+
+# INTRODUCTION
+
+Some months ago, a client wanted some charts to help visualize the risk factors that impact youth HIV. The National Survey of Family Growth, one of the nationally-representative health surveys conducted by the CDC, is a good source of information to meet the client’s needs. The data is publicly available via the division of [National Center for Health Statistics](https://www.cdc.gov/nchs/nsfg/index.htm). 
+
+To create these visuals, I have chosen to use the most recent iteration of the NSFG (at the time of this document), which is 2017 - 2019. The data is available in several formats, including SAS, Stata, and SPSS. I prefer Stata, so I downloaded the data in the Stata format. It is those Stata formatted data files that I work on below. I believe it is possible to import the raw data, formatted as text files (saved as *.dat*). The advantage of using the pre-formatted data files is that they contain the appropriate variable and value labels.
+
+# R PACKAGES
+
+```{r, warning=FALSE, message=FALSE, include=FALSE}
+
+library(rio)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(expss)
+library(lubridate)
+library(ggplot2)
+library(kableExtra)
+
+
+```
+
+# IMPORT DATA {.tabset}
+
+
+```{r, warning=FALSE, message=FALSE}
+
+a1 <- import("~/Documents/GitHub/NSFGViz/data/20172019male.dta")
+
+a2 <- import("~/Documents/GitHub/NSFGViz/data/variables.csv") ## List of relevant variables
+
+a3 <- import("~/Documents/GitHub/NSFGViz/data/20172019fem.dta")
+
+```
+
+## Limit DataFrame
+In the imported raw data, there are too many variables. It represents the full NSFG survey. We need to limit the dataframe so we are lonly looking at specific variables. Reference **Appendix A** below, for a list of all the relevant variables. 
+
+```{r, warning=FALSE, message=FALSE}
+
+a4 <- a1 %>%
+  select(caseid,givoralm,getoralm,oralcondm,ANALSEX2,ANALCONDM1, ANALSEX3, ANALCONDM2, malesex, malprtage,samesexany,malprthrace,SAMORAL12, RECEPANAL12, INSERANAL12, SAMESEX1, msamerel, msmnonmon, MALSHT12,JOHN2FRQ,PROS2FRQ,HIVMAL12,MSMSORT12,cndlsmal,samlifenum,samyearnum, condalls, mflastp, whycond, dateapp, attract,ORIENT_A,ORIENT_B, confconc, timalon, RISKCHEK1,RISKCHEK2, RISKCHEK3, RISKCHEK4,rectdouch,STDTST12, STDSITE12, STDTRT12,gon, chlam,herpes, genwarts, syphilis,evrinject,evrshare,VAGNUM12,ORALNUM12,ANALNUM12,nonmonog,NNONMONOG1,NNONMONOG2,NNONMONOG3,FEMSHT12,johnfreq,prostfrq,HIVFEM12,opplifenum,oppyearnum,femtouch,vagsex,agevagr,condvag,COND1BRK,COND1OFF,whycondl,getoralf,condfell,givoralf,timing,analsex,condanal,condsexl,anyoral,oppsexany,oppsexgen,SMK100,agesmk,SMOKE12,smkstop,DRINK12,UNIT30D,DRINK30D,drinkday,BINGE30,drnkmost,BINGE12,POT12,COC12,CRACK12,CRYSTMTH12,INJECT12,samesex,donblood,hivtest,nohivtst,WHENHIV_M,WHENHIV_Y,hivtstyr,hivresult,whynoget,plchiv,RHHIVT1,RHHIVT21,RHHIVT22,RHHIVT23,RHHIVT24,RHHIVT25,hivtst,prephiv,talkdoct,AIDSTALK01,AIDSTALK02,AIDSTALK03,AIDSTALK04,AIDSTALK05,AIDSTALK06,AIDSTALK07,AIDSTALK08,AIDSTALK09,AIDSTALK10,AIDSTALK11,cmhivtst,SXMON12,P12MOCONO,P12MOCON,sexfreq,confreq,sexstat,eversex,sxmtonce,ynosex,TALKPAR1,TALKPAR2,TALKPAR3,TALKPAR4,TALKPAR5,TALKPAR6,TALKPAR7,sedno,SEDNOLC1,SEDNOLC2,SEDNOLC3,SEDNOLC4,sednog,sednosx,sedbc,SEDBCLC1,SEDBCLC2,SEDBCLC3,SEDBCLC4,sedbcg,sedbcsx,sedwhbc,SEDWHLC1,SEDWHLC2,SEDWHLC3,SEDWHLC4,sedwhbcg,sedwbcsx,sedcond,SEDCONLC1,SEDCONLC2,SEDCONLC3,SEDCONLC4,sedcondg,sedconsx,sedstd,SEDSTDLC1,SEDSTDLC2,SEDSTDLC3,SEDSTDLC4,sedstdg,sedstdsx,sedhiv,SEDHIVLC1,SEDHIVLC2,SEDHIVLC3,SEDHIVLC4,sedhivg,sedhivsx,sedabst,SEDABLC1,SEDABLC2,SEDABLC3,SEDABLC4,sedabstg,sedabssx,rhadsex,ager,fmarital,rmarital,hieduc,hispanic,race,WGT2017_2019,secu,sest)
+
+a5<-a3 %>% 
+  select(ager,fmarital,rmarital,hieduc,hispanic,race,caseid,sedhiv,SEDHIVLC1,SEDHIVLC2,SEDHIVLC3,SEDHIVLC4,sedhivg,sedhivsx,hivtest,nohivtst,WHENHIV_M,WHENHIV_Y,cmhivtst,hivtstyr,hivresult,whynoget,plchiv,RHHIVT1,RHHIVT21,RHHIVT22,hivtst,prephiv,talkdoct,AIDSTALK01,AIDSTALK02,AIDSTALK03,AIDSTALK04,AIDSTALK05,AIDSTALK06,AIDSTALK07,AIDSTALK08,AIDSTALK09,AIDSTALK10,AIDSTALK11,vagsex,agevagr,condvag,whycondl,getoralm,givoralm,condfell,timing,analsex,condanal,condsexl,anyoral,oppsexany,oppsexgen,givoralf,getoralf,femsex,SAMESEX1,fsamerel,samesexany,samlifenum,samyearnum,mflastp,dateapp,attract,ORIENT_A,ORIENT_B,confconc,timalon,RISKCHEK1,RISKCHEK2,RISKCHEK3,RISKCHEK4,chlamtst,STDOTHR12,STDTRT12,gon,chlam,herpes,genwarts,syphilis,evrinject,evrshare,TALKPAR1,TALKPAR2,TALKPAR3,TALKPAR4,TALKPAR5,TALKPAR6,TALKPAR7,sedno,SEDNOLC1,SEDNOLC2,SEDNOLC3,SEDNOLC4,sednog,sednosx,sedbc,SEDBCLC1,SEDBCLC2,SEDBCLC3,SEDBCLC4,sedbcg,sedbcsx,sedwhbc,SEDWHLC1,SEDWHLC2,SEDWHLC3,SEDWHLC4,sedwhbcg,sedwbcsx,sedcond,SEDCONLC1,SEDCONLC2,SEDCONLC3,SEDCONLC4,sedcondg,sedconsx,sedstd,SEDSTDLC1,SEDSTDLC2,SEDSTDLC3,SEDSTDLC4,sedstdg,sedstdsx,sedhiv,SEDHIVLC1,SEDHIVLC2,SEDHIVLC3,SEDHIVLC4,sedhivg,sedhivsx,sedabst,SEDABLC1,SEDABLC2,SEDABLC3,SEDABLC4,sedabstg,sedabssx,onown,ONOWN18,eversex,rhadsex,ynosex,grfstsx,sxmtonce,methdiss,whencond,REASCOND01,REASCOND02,REASCOND03,REASCOND04,REASCOND05,REASCOND06,REASCOND07,vagsex,agevagr,condvag,whycondl,getoralm,givoralm,condfell,timing,analsex,condanal,condsexl,anyoral,oppsexany,oppsexgen,VAGNUM12,ORALNUM12,ANALNUM12,bisexprt,nonmonog,NNONMONOG1,NNONMONOG2,NNONMONOG3,MALSHT12,prostfrq,johnfreq,HIVMAL12,opplifenum,oppyearnum,nobedyr,stayrel,evsuspen,gradsusp,SMK100,agesmk,SMOKE12,smkstop,DRINK12,UNIT30D,DRINK30D,drinkday,BINGE30,drnkmost,BINGE12,POT12,COC12,CRACK12,CRYSTMTH12,INJECT12,WGT2017_2019,secu,sest)
+
+```
+
+
+# APPENDIX
+
+## Appendix-A.
+
+**Relevant Variables**
+
+We use the kableExtra package to create beautiful tables. See the following for instructions:
+
+ *    [kableExtra Cran R-project](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#Bootstrap_theme)
+
+```{r}
+appdx_a <- kable(a2, col.names = c("Variable Name", "Variable Label","NSFG Data"), 
+      align = c("l", "l", "l")) %>%
+  kable_paper("hover", full_width = F)
+
+## Print table
+appdx_a
+```
+
