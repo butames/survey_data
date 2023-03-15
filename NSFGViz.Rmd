@@ -1,0 +1,455 @@
+---
+title: "Cleaning NSFG Data"
+subtitle: 'Notebook to clean NSFG 2017-2019 data'
+author: "Seyram A. Butame"
+date: "May 2022"
+output:
+  html_notebook:
+    toc: yes
+    number_sections: yes
+    toc_float: yes
+    smooth_scroll: true
+    
+bibliography: references.bib
+csl: american-medical-association.csl
+---
+
+# Introduction
+
+I am attempting to create a dashboard using data form the National Survey of Family Growth survey. The dashboard, will highlight factors such as use of contraceptive, sexual activity, drug and alcohol use behaviors. But before I can actually use the data, I have to parse the large NSFW data sets selecting the relevant variables. This documents denotes the process. I have already downloaded the Female and Male survey data for 2022 in separate files, from the NSFG website (I describe that in the section below). So, this document focuses on the cleaning and arrangement 
+
+## Downloading Raw Data
+I have already parsed the male and female files in Stata. So, the objective here is create individual smaller data sets that we can then import into Tableau and use for the creating of a series of viz charts. 
+
+# Needed Paackages
+
+```{r libraries, message=FALSE, warning=FALSE}
+library(rio)
+library(dplyr)
+library(readxl)
+library(janitor)
+library(lubridate)
+library(ggplot2)
+library(kableExtra)
+library(rmarkdown)
+library(bookdown)
+```
+
+
+# Data
+
+## Female Data
+
+
+## Male Data
+
+## Relevant Variables
+The NSFG is a big data set and contains a multitude of variables and observations. To be able to effectively use it and to comment on the matter of youth HIV in Florida, we have to select specific variables. I went ahead and created an exhaustive list of all that is needed after reviewing the code book and the raw data files. The exhaustive list is what we are importing below, to have on hand.
+
+```{r rawdata, warning=FALSE, message=FALSE}
+
+val1 <- import("~/Documents/GitHub/NSFGViz/data_raw/variables.csv")
+nsfgmale <- import("~/Documents/GitHub/NSFGViz/data_raw/20172019male.dta")
+nsfgfem <- import("~/Documents/GitHub/NSFGViz/data_raw/20172019fem.dta")
+
+```
+
+```{r clean, warning=FALSE, message=FALSE}
+
+## Select key variables and create a variable for sex at birth
+
+
+df1 <- nsfgmale %>% select(caseid, givoralm, getoralm, oralcondm, ANALSEX2, ANALCONDM1, ANALSEX3, ANALCONDM2, malesex, malprtage, samesexany, malprthrace, SAMORAL12, RECEPANAL12, INSERANAL12, SAMESEX1, msamerel, msmnonmon, MALSHT12, JOHN2FRQ, PROS2FRQ, HIVMAL12, MSMSORT12, cndlsmal, samlifenum, samyearnum, condalls, mflastp, whycond, dateapp, attract, ORIENT_A, ORIENT_B, confconc, timalon, RISKCHEK1, RISKCHEK2, RISKCHEK3, RISKCHEK4, rectdouch, STDTST12, STDSITE12, STDTRT12, gon, chlam, herpes, genwarts, syphilis, evrinject, evrshare, VAGNUM12, ORALNUM12, ANALNUM12, nonmonog, NNONMONOG1, NNONMONOG2, NNONMONOG3, FEMSHT12, johnfreq, prostfrq, HIVFEM12, opplifenum, oppyearnum, femtouch, vagsex, agevagr, condvag, COND1BRK, COND1OFF, whycondl, getoralf, condfell, givoralf, timing, analsex, condanal, condsexl, anyoral, oppsexany, oppsexgen, SMK100, agesmk, SMOKE12, smkstop, DRINK12, UNIT30D, DRINK30D, drinkday, BINGE30, drnkmost, BINGE12, POT12, COC12, CRACK12, CRYSTMTH12, INJECT12, donblood, hivtest, nohivtst, WHENHIV_M, WHENHIV_Y, hivtstyr, hivresult, whynoget, plchiv, RHHIVT1, RHHIVT21, RHHIVT22, RHHIVT23, RHHIVT24, RHHIVT25, hivtst, prephiv, talkdoct, AIDSTALK01, AIDSTALK02, AIDSTALK03, AIDSTALK04, AIDSTALK05, AIDSTALK06, AIDSTALK07, AIDSTALK08, AIDSTALK09, AIDSTALK10, AIDSTALK11, cmhivtst, SXMON12, P12MOCONO, P12MOCON, sexfreq, confreq, sexstat, eversex, sxmtonce, ynosex, TALKPAR1, TALKPAR2, TALKPAR3, TALKPAR4, TALKPAR5, TALKPAR6, TALKPAR7, sedno, SEDNOLC1, SEDNOLC2, SEDNOLC3, SEDNOLC4, sednog, sednosx, sedbc, SEDBCLC1, SEDBCLC2, SEDBCLC3, SEDBCLC4, sedbcg, sedbcsx, sedwhbc, SEDWHLC1, SEDWHLC2, SEDWHLC3, SEDWHLC4, sedwhbcg, sedwbcsx, sedcond, SEDCONLC1, SEDCONLC2, SEDCONLC3, SEDCONLC4, sedcondg, sedconsx, sedstd, SEDSTDLC1, SEDSTDLC2, SEDSTDLC3, SEDSTDLC4, sedstdg, sedstdsx, sedhiv, SEDHIVLC1, SEDHIVLC2, SEDHIVLC3, SEDHIVLC4, sedhivg, sedhivsx, sedabst, SEDABLC1, SEDABLC2, SEDABLC3, SEDABLC4, sedabstg, sedabssx, rhadsex, ager, fmarital, rmarital, hieduc, hispanic, race, poverty, religion, WGT2017_2019, secu, sest) %>%
+  mutate(sexbirth = 0)
+
+## Select key variables and create a variable for sex at birth
+
+df2 <- nsfgfem %>% select(fmarital, rmarital, hieduc, hispanic, race, poverty, religion, caseid, sedhiv, SEDHIVLC1, SEDHIVLC2, SEDHIVLC3, SEDHIVLC4, sedhivg, sedhivsx, hivtest, nohivtst, WHENHIV_M, WHENHIV_Y, cmhivtst, hivtstyr, hivresult, whynoget, plchiv, RHHIVT1, RHHIVT21, RHHIVT22, hivtst, prephiv, talkdoct, AIDSTALK01, AIDSTALK02, AIDSTALK03, AIDSTALK04, AIDSTALK05, AIDSTALK06, AIDSTALK07, AIDSTALK08, AIDSTALK09, AIDSTALK10, AIDSTALK11, vagsex, agevagr, condvag, whycondl, getoralm, givoralm, condfell, timing, analsex, condanal, condsexl, anyoral, oppsexany, oppsexgen, givoralf, getoralf, femsex, SAMESEX1, fsamerel, samesexany, samlifenum, samyearnum, mflastp, dateapp, attract, ORIENT_A, ORIENT_B, confconc, timalon, RISKCHEK1, RISKCHEK2, RISKCHEK3, RISKCHEK4, chlamtst, STDOTHR12, STDTRT12, gon, chlam, herpes, genwarts, syphilis, evrinject, evrshare, TALKPAR1, TALKPAR2, TALKPAR3, TALKPAR4, TALKPAR5, TALKPAR6, TALKPAR7, sedno, SEDNOLC1, SEDNOLC2, SEDNOLC3, SEDNOLC4, sednog, sednosx, sedbc, SEDBCLC1, SEDBCLC2, SEDBCLC3, SEDBCLC4, sedbcg, sedbcsx, sedwhbc, SEDWHLC1, SEDWHLC2, SEDWHLC3, SEDWHLC4, sedwhbcg, sedwbcsx, sedcond, SEDCONLC1, SEDCONLC2, SEDCONLC3, SEDCONLC4, sedcondg, sedconsx, sedstd, SEDSTDLC1, SEDSTDLC2, SEDSTDLC3, SEDSTDLC4, sedstdg, sedstdsx, sedhiv, SEDHIVLC1, SEDHIVLC2, SEDHIVLC3, SEDHIVLC4, sedhivg, sedhivsx, sedabst, SEDABLC1, SEDABLC2, SEDABLC3, SEDABLC4, sedabstg, sedabssx, onown, ONOWN18, eversex, rhadsex, ynosex, grfstsx, sxmtonce, methdiss, whencond, REASCOND01, REASCOND02, REASCOND03, REASCOND04, REASCOND05, REASCOND06, REASCOND07, vagsex, agevagr, condvag, whycondl, getoralm, givoralm, condfell, timing, analsex, condanal, condsexl, anyoral, oppsexany, ager, oppsexgen, VAGNUM12, ORALNUM12, ANALNUM12, bisexprt, nonmonog, NNONMONOG1, NNONMONOG2, NNONMONOG3, MALSHT12, prostfrq, johnfreq, HIVMAL12, opplifenum, oppyearnum, nobedyr, stayrel, evsuspen, gradsusp, SMK100, agesmk, SMOKE12, smkstop, DRINK12, UNIT30D, DRINK30D, drinkday, BINGE30, drnkmost, BINGE12, POT12, COC12, CRACK12, CRYSTMTH12, INJECT12, WGT2017_2019, secu, sest) %>%
+  mutate(sexbirth = 1)
+
+## Append Male and Female Data
+nsfgclean <- df1 %>%
+  bind_rows(df2)
+
+## Create Higher Education Category Variable
+
+nsfgclean$hieducat <- case_when(
+    nsfgclean$hiedu <= 5 ~ 1,
+    nsfgclean$hiedu <= 9 ~ 2,
+    nsfgclean$hiedu <= 11 ~ 3,
+    nsfgclean$hiedu <= 12 ~ 4,
+    nsfgclean$hiedu <= 15 ~ 5
+  )
+
+
+## Percentage of the federal poverty line.
+## The variable is denoted in both male and female data as "poverty"
+## It is labeled as "Poverty level income (RECODE)".
+
+nsfgclean$povertycat <- case_when(
+    nsfgclean$poverty <= 50 ~ 1,
+    nsfgclean$poverty <= 99 ~ 2,
+    nsfgclean$poverty <= 199 ~ 3,
+    nsfgclean$poverty <= 299 ~ 4,
+    nsfgclean$poverty <= 399 ~ 5,
+    nsfgclean$poverty <= 499 ~ 6,
+    nsfgclean$poverty <= 599 ~ 7,
+    nsfgclean$poverty <= 699 ~ 8,
+    nsfgclean$poverty >= 700 ~ 9
+)
+
+
+## Create variable denoting sex w/ injection drug user of opposite sex.
+## In NSFG the question is labeled "R had sex w/female (or male) intravenous drug user"
+## For male data variable is "MALSHT12"
+## For female data variable is "FEMSHT12"
+
+nsfgclean$iduser_sex <- case_when(
+    nsfgclean$FEMSHT12 == 1 | nsfgclean$MALSHT12 == 1 ~ 1,
+    nsfgclean$FEMSHT12 == 5 | nsfgclean$MALSHT12 == 5 ~ 2
+)
+
+
+## Create variable denoting any MSM experience.
+## In NSFG the question in the male data is labeled "Ever had oral or anal sex with a male"
+## In NSFG the question in the female data is labeled "Ever had sexual contact with a female (Computed in FC J-19)"
+
+nsfgclean <- nsfgclean %>%
+  mutate(msm_ever = as.numeric(samesexany==1 & sexbirth==0)) %>%
+  mutate(wsw_ever = as.numeric(samesexany==1 & sexbirth==1))
+
+
+## Categories for first smoking regularly.
+
+nsfgclean$agesmkcat <- case_when(
+    nsfgclean$agesmk == 0  ~ 1,
+    nsfgclean$agesmk <= 14 ~ 2,
+    nsfgclean$agesmk <= 19 ~ 3,
+    nsfgclean$agesmk <= 24 ~ 4,
+    nsfgclean$agesmk >= 30 & nsfgclean$agesmk <= 50 ~ 5,
+)
+
+## Number of partners of the opposite sex respondent had anal sex with in the past 12 months
+## Variable is named "ANALNUM12"
+## Label is "# female partners past 12 months had anal sex with" for male data set or ## Label is "# male partners past 12 months had anal sex with" for the female data set
+
+nsfgclean$analnum12 <- case_when(
+    nsfgclean$ANALNUM12 == 0  ~ 1,
+    nsfgclean$ANALNUM12 == 1 ~ 2,
+    nsfgclean$ANALNUM12 <= 5 ~ 3,
+    nsfgclean$ANALNUM12 >= 6 & nsfgclean$ANALNUM12 <= 20 ~ 4,
+)
+
+## Number of partners of the opposite sex respondent had oral sex with in the past 12 months
+## Variable is named "ORALNUM12"
+## Label is "# female partners past 12 months had oral sex with" for male data set or ## Label is "# male partners past 12 months had oral sex with" for the female data set
+
+nsfgclean$oralnum12 <- case_when(
+    nsfgclean$ORALNUM12 == 0  ~ 1,
+    nsfgclean$ORALNUM12 == 1 ~ 2,
+    nsfgclean$ORALNUM12 <= 5 ~ 3,
+    nsfgclean$ORALNUM12 >= 6 & nsfgclean$ORALNUM12 <= 20 ~ 4,
+)
+
+## Number of partners of the opposite sex respondent had oral sex with in the past 12 months
+## Variable is named "VAGNUM12"
+## Label is "# female partners past 12 months had vaginal sex with" for male data set or ## Label is "# male partners past 12 months had vaginal sex with" for the female data set
+
+nsfgclean$vagnum12 <- case_when(
+    nsfgclean$VAGNUM12 == 0  ~ 1,
+    nsfgclean$VAGNUM12 == 1 ~ 2,
+    nsfgclean$VAGNUM12 <= 5 ~ 3,
+    nsfgclean$VAGNUM12 >= 6 & nsfgclean$VAGNUM12 <= 20 ~ 4,
+)
+
+
+## Create two category talk to doctor about AIDS variable
+## The original variable "talkdoct" has four categories: Yes, No, Refused, and Don't Know.
+## I am going to put Refused and Don't Know into the No category, so I am turning
+## this variable into two categories instead of four.
+
+nsfgclean$talkdoct2 <- case_when(
+  nsfgclean$talkdoct == 1 ~ 1,
+  nsfgclean$talkdoct >= 5 ~ 2
+)
+
+
+## Export clean combined files
+
+export(nsfgclean, "nsfgclean.dta")
+
+```
+
+## Sex Communication and Edcuation
+
+There are some questions in the survey that cover the issues of sex education and sex communication. They approximate to issues having to do with when respondents learned about sex, where they learned about sex, and how they talk about sex and other sexual health related topics. I am going to create a series of smaller data sets that contain variables of interest. The first 12 variables are population characteristics of interest and unique identifiers in the survey to assist with manipulation:
+* caseid
+* WGT2017_2019
+* sexbirth 
+* hispanic 
+* msm_ever 
+* wsw_ever
+* race
+* agecat 
+* hieducat 
+* metro
+* religion
+* poverty
+
+### Talking to Parents
+The first dataset of interest is related to talking to parents about sex and birth control. The survey items relevant to this topic area are denoted in the variables, TALKPAR1, TALKPAR2, TALKPAR3, TALKPAR4, TALKPAR5, TALKPAR6, and TALKPAR7. These variables are derived from a survey item only given to respondents 25 years and younger.
+
+```{r}
+
+## Create Other Variables
+
+## Create Age Category Variable
+## Note that per the survey documentation, questions about talking with parents were asked of respondents who were 25 years and younger.
+## That is, ""Universe : Applicable if R's age at screener was less than 25 years (agescrn < 25)" (Source: 2017-2019 NSFG Section Codebook)
+
+nsfgclean$agecat <- case_when(
+    nsfgclean$ager <= 19 ~ 1,
+    nsfgclean$ager <= 25 ~ 2
+  )
+
+nsfgcom <- nsfgclean %>%
+  select(caseid, WGT2017_2019, sexbirth, hispanic, msm_ever, wsw_ever, race, ager, agecat, hieducat, povertycat, religion, TALKPAR1, TALKPAR2, TALKPAR3, TALKPAR4, TALKPAR5, TALKPAR6, TALKPAR7) %>%
+  rename(wgt1719 = WGT2017_2019,
+         talkpar1 = TALKPAR1,
+         talkpar2 = TALKPAR2,
+         talkpar3 = TALKPAR3,
+         talkpar4 = TALKPAR4,
+         talkpar5 = TALKPAR5,
+         talkpar6 = TALKPAR6,
+         talkpar7 = TALKPAR7) %>%
+  mutate(sexbirth = replace (sexbirth, sexbirth == "0", "Male"),
+         sexbirth = replace (sexbirth, sexbirth == "1", "Female"),
+         hispanic = replace (hispanic, hispanic == "1", "Hispanic"),
+         hispanic = replace (hispanic, hispanic == "2", "Non-Hispanic"),
+         msm_ever = replace (msm_ever, msm_ever == "0", "No"),
+         msm_ever = replace (msm_ever, msm_ever == "1", "Yes"),
+         wsw_ever = replace (wsw_ever, wsw_ever == "0", "No"),
+         wsw_ever = replace (wsw_ever, wsw_ever == "1", "Yes"),
+         race = replace(race, race == "1", "Black"),
+         race = replace(race, race == "2", "White"),
+         race = replace(race, race == "3", "Other"),
+         agecat = replace(agecat, agecat == "1", "19yrs or less"),
+         agecat = replace(agecat, agecat == "2", "20 - 25 yrs"),
+         hieducat = replace(hieducat, hieducat == "1", "9th grd or less"),
+         hieducat = replace(hieducat, hieducat == "2", "High sch or GED"),
+         hieducat = replace(hieducat, hieducat == "3", "Some coll. or Assoc"),
+         hieducat = replace(hieducat, hieducat == "4", "Bachelors Dg"),
+         hieducat = replace(hieducat, hieducat == "5", "Grad Dg or more"),
+         povertycat = replace(povertycat, povertycat == "1", "50 percent or less"),
+         povertycat = replace(povertycat, povertycat == "2", "51-99 percent"),
+         povertycat = replace(povertycat, povertycat == "3", "100-199 percent"),
+         povertycat = replace(povertycat, povertycat == "4", "200-299 percent"),
+         povertycat = replace(povertycat, povertycat == "5", "300-399 percent"),
+         povertycat = replace(povertycat, povertycat == "6", "400-499 percent"),
+         povertycat = replace(povertycat, povertycat == "7", "500-599 percent"),
+         povertycat = replace(povertycat, povertycat == "8", "600-699 percent"),
+         povertycat = replace(povertycat, povertycat == "9", "700 percen or more"),
+         religion = replace(religion, religion == "1", "No religion"),
+         religion = replace(religion, religion == "2", "Catholic"),
+         religion = replace(religion, religion == "3", "Protestant"),
+         religion = replace(religion, religion == "4", "Other religion"))
+
+
+export(nsfgcom, "nsfgcom.dta")
+export(nsfgcom, "nsfgcom.xlsx")
+
+
+```
+
+
+### Talking to Providers (HIV/AIDS)
+
+```{r}
+
+## Create Other Variables
+
+## Create Age Category Variable
+## Note that per the survey documentation, questions about talking with parents were asked of respondents who were 25 years and younger.
+## That is, ""Universe : Applicable if R's age at screener was less than 25 years (agescrn < 25)" (Source: 2017-2019 NSFG Section Codebook)
+
+nsfgclean$agecat <- case_when(
+    nsfgclean$ager <= 19 ~ 1,
+    nsfgclean$ager <= 25 ~ 2, 
+    nsfgclean$ager <= 30 ~ 3, 
+    nsfgclean$ager <= 35 ~ 4,
+    nsfgclean$ager <= 40 ~ 5,
+    nsfgclean$ager >= 41 ~ 6
+  )
+
+nsfgaids <- nsfgclean %>%
+  select(caseid, WGT2017_2019, sexbirth, hispanic, msm_ever, wsw_ever, race, ager, agecat, hieducat, religion, povertycat, talkdoct2, AIDSTALK01, AIDSTALK02, AIDSTALK03, AIDSTALK04, AIDSTALK05, AIDSTALK06, AIDSTALK07, AIDSTALK08, AIDSTALK09, AIDSTALK10, AIDSTALK11) %>%
+  rename(wgt1719 = WGT2017_2019,
+         aidspar1 = AIDSTALK01,
+         aidspar2 = AIDSTALK02,
+         aidspar3 = AIDSTALK03,
+         aidspar4 = AIDSTALK04,
+         aidspar5 = AIDSTALK05,
+         aidspar6 = AIDSTALK06,
+         aidspar7 = AIDSTALK07,
+         aidspar8 = AIDSTALK08,
+         aidspar9 = AIDSTALK09,
+         aidspar10 = AIDSTALK10,
+         aidspar11 = AIDSTALK11) %>%
+  mutate(sexbirth = replace (sexbirth, sexbirth == "0", "Male"),
+         sexbirth = replace (sexbirth, sexbirth == "1", "Female"),
+         hispanic = replace (hispanic, hispanic == "1", "Hispanic"),
+         hispanic = replace (hispanic, hispanic == "2", "Non-Hispanic"),
+         msm_ever = replace (msm_ever, msm_ever == "0", "No"),
+         msm_ever = replace (msm_ever, msm_ever == "1", "Yes"),
+         wsw_ever = replace (wsw_ever, wsw_ever == "0", "No"),
+         wsw_ever = replace (wsw_ever, wsw_ever == "1", "Yes"),
+         race = replace(race, race == "1", "Black"),
+         race = replace(race, race == "2", "White"),
+         race = replace(race, race == "3", "Other"),
+         agecat = replace(agecat, agecat == "1", "19 yrs or less"),
+         agecat = replace(agecat, agecat == "2", "20 - 25 yrs"),
+         agecat = replace(agecat, agecat == "3", "26 - 30 yrs"),
+         agecat = replace(agecat, agecat == "4", "31 - 35 yrs"),
+         agecat = replace(agecat, agecat == "5", "36 - 40 yrs"),
+         agecat = replace(agecat, agecat == "6", "41 yrs or more"),
+         hieducat = replace(hieducat, hieducat == "1", "9th grd or less"),
+         hieducat = replace(hieducat, hieducat == "2", "High sch or GED"),
+         hieducat = replace(hieducat, hieducat == "3", "Some coll. or Assoc"),
+         hieducat = replace(hieducat, hieducat == "4", "Bachelors Dg"),
+         hieducat = replace(hieducat, hieducat == "5", "Grad Dg or more"),
+         povertycat = replace(povertycat, povertycat == "1", "50 percent or less"),
+         povertycat = replace(povertycat, povertycat == "2", "51-99 percent"),
+         povertycat = replace(povertycat, povertycat == "3", "100-199 percent"),
+         povertycat = replace(povertycat, povertycat == "4", "200-299 percent"),
+         povertycat = replace(povertycat, povertycat == "5", "300-399 percent"),
+         povertycat = replace(povertycat, povertycat == "6", "400-499 percent"),
+         povertycat = replace(povertycat, povertycat == "7", "500-599 percent"),
+         povertycat = replace(povertycat, povertycat == "8", "600-699 percent"),
+         povertycat = replace(povertycat, povertycat == "9", "700 percen or more"),
+         religion = replace(religion, religion == "1", "No religion"),
+         religion = replace(religion, religion == "2", "Catholic"),
+         religion = replace(religion, religion == "3", "Protestant"),
+         religion = replace(religion, religion == "4", "Other religion"),
+         talkdoct2 = replace(talkdoct2, talkdoct2 == "1", "Yes"),
+         talkdoct2 = replace(talkdoct2, talkdoct2 == "2", "No"))
+
+export(nsfgaids, "nsfgaids.dta")
+export(nsfgaids, "nsfgaids.xlsx")
+```
+
+
+### Sex Education in the US
+
+#### Saying No to Sex
+
+In all the previous instances, when I subset the data, I simply subset the relevant variables. However this time because we know that the questions about sex education (i.e., "Saying no to sex") were targeted to respondents where were 25 years and under, I am also going to filter the data so that it only represents those 25 years and under.
+
+```{r}
+
+df1 <-  nsfgclean %>%
+  filter(ager <=25)
+
+df1$agecat <- case_when(
+    df1$ager <= 19 ~ 1,
+    df1$ager <= 25 ~ 2
+  )
+
+
+df1$sednogct <- case_when(
+    df1$sednog <= 6 ~ 1,
+    df1$sednog <= 8 ~ 2, 
+    df1$sednog <= 12 ~ 3, 
+    df1$sednog <= 99 ~ 4
+  )
+
+df1$sedno1 <- case_when(
+    df1$sedno == 1 ~ 1,
+    df1$sedno <= 9 ~ 2
+  )
+
+
+nsfgsayno <- df1 %>%
+  select(caseid, WGT2017_2019, sexbirth, hispanic, msm_ever, wsw_ever, race, ager, agecat, hieducat, religion, povertycat, sedno1, SEDNOLC1, SEDNOLC2, SEDNOLC3, SEDNOLC4, sednog, sednogct, sednosx) %>%
+  rename(wgt1719 = WGT2017_2019,
+         sednolc1 = SEDNOLC1,
+         sednolc2 = SEDNOLC2,
+         sednolc3 = SEDNOLC3,
+         sednolc4 = SEDNOLC4) %>%
+  mutate(sexbirth = replace (sexbirth, sexbirth == "0", "Male"),
+         sexbirth = replace (sexbirth, sexbirth == "1", "Female"),
+         hispanic = replace (hispanic, hispanic == "1", "Hispanic"),
+         hispanic = replace (hispanic, hispanic == "2", "Non-Hispanic"),
+         msm_ever = replace (msm_ever, msm_ever == "0", "No"),
+         msm_ever = replace (msm_ever, msm_ever == "1", "Yes"),
+         wsw_ever = replace (wsw_ever, wsw_ever == "0", "No"),
+         wsw_ever = replace (wsw_ever, wsw_ever == "1", "Yes"),
+         race = replace(race, race == "1", "Black"),
+         race = replace(race, race == "2", "White"),
+         race = replace(race, race == "3", "Other"),
+         agecat = replace(agecat, agecat == "1", "19 yrs or less"),
+         agecat = replace(agecat, agecat == "2", "20 - 25 yrs"),
+         hieducat = replace(hieducat, hieducat == "1", "9th grd or less"),
+         hieducat = replace(hieducat, hieducat == "2", "High sch or GED"),
+         hieducat = replace(hieducat, hieducat == "3", "Some coll. or Assoc"),
+         hieducat = replace(hieducat, hieducat == "4", "Bachelors Dg"),
+         hieducat = replace(hieducat, hieducat == "5", "Grad Dg or more"),
+         povertycat = replace(povertycat, povertycat == "1", "50 percent or less"),
+         povertycat = replace(povertycat, povertycat == "2", "51-99 percent"),
+         povertycat = replace(povertycat, povertycat == "3", "100-199 percent"),
+         povertycat = replace(povertycat, povertycat == "4", "200-299 percent"),
+         povertycat = replace(povertycat, povertycat == "5", "300-399 percent"),
+         povertycat = replace(povertycat, povertycat == "6", "400-499 percent"),
+         povertycat = replace(povertycat, povertycat == "7", "500-599 percent"),
+         povertycat = replace(povertycat, povertycat == "8", "600-699 percent"),
+         povertycat = replace(povertycat, povertycat == "9", "700 percen or more"),
+         religion = replace(religion, religion == "1", "No religion"),
+         religion = replace(religion, religion == "2", "Catholic"),
+         religion = replace(religion, religion == "3", "Protestant"),
+         religion = replace(religion, religion == "4", "Other religion"),
+         sedno1 = replace(sedno1, sedno1 == "1", "Yes"),
+         sedno1 = replace(sedno1, sedno1 == "2", "No/Don't Know"),
+         sednosx = replace(sednosx, sednosx == "1", "Before"),
+         sednosx = replace(sednosx, sednosx == "2", "After"),
+         sednogct = replace(sednogct, sednogct == "1", "Elementary"),
+         sednogct = replace(sednogct, sednogct == "2", "Middle sch"),
+         sednogct = replace(sednogct, sednogct == "3", "High sch"),
+         sednogct = replace(sednogct, sednogct == "4", "Don't know/No sch"),
+         sednolc1 = replace(sednolc1, sednolc1 == "1", "School"),
+         sednolc1 = replace(sednolc1, sednolc1 == "2", "Church"),
+         sednolc1 = replace(sednolc1, sednolc1 == "3", "Community Ctr"),
+         sednolc1 = replace(sednolc1, sednolc1 == "4", "Other place"),
+         sednolc2 = replace(sednolc2, sednolc2 == "1", "School"),
+         sednolc2 = replace(sednolc2, sednolc2 == "2", "Church"),
+         sednolc2 = replace(sednolc2, sednolc2 == "3", "Community Ctr"),
+         sednolc2 = replace(sednolc2, sednolc2 == "4", "Other place"),
+         sednolc3 = replace(sednolc3, sednolc3 == "1", "School"),
+         sednolc3 = replace(sednolc3, sednolc3 == "2", "Church"),
+         sednolc3 = replace(sednolc3, sednolc3 == "3", "Community Ctr"),
+         sednolc3 = replace(sednolc3, sednolc3 == "4", "Other place"),
+         sednolc4 = replace(sednolc4, sednolc4 == "1", "School"),
+         sednolc4 = replace(sednolc4, sednolc4 == "2", "Church"),
+         sednolc4 = replace(sednolc4, sednolc4 == "3", "Community Ctr"),
+         sednolc4 = replace(sednolc4, sednolc4 == "4", "Other place"))
+
+
+export(nsfgsayno, "nsfgsayno.dta")
+export(nsfgsayno, "nsfgsayno.xlsx")
+```
+
+
+## Appendix
+
+Shows a table with the variables from the 2017-2019 NSFG that we use for this project. 
+
+```{r}
+appdx_a <- kable(val1, col.names = c("Variables", "Labels", "Data"),
+align = c("l", "l", "l")) %>%
+kable_paper("hover", full_width = F)
+
+appdx_a
+
+```
+
+
+but then again
+

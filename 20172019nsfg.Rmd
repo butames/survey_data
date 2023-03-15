@@ -5,6 +5,7 @@ author: "Seyram A. Butame"
 date: "April 2022"
 output:
   html_notebook:
+    css: "style.css"
     toc: yes
     number_sections: yes
     toc_float: yes
