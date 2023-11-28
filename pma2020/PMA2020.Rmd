@@ -1,0 +1,115 @@
+---
+title: "Cleaning PMA2020 Data"
+subtitle: 'Notebook to clean PMA2020 data'
+author: "Seyram A. Butame"
+date: "April 2022"
+output:
+  html_notebook:
+    toc: yes
+    number_sections: yes
+    toc_float: yes
+    smooth_scroll: true
+    
+bibliography: references.bib
+csl: american-medical-association.csl
+---
+
+# INTRODUCTION
+
+## Contraceptive Use
+
+## Data Setting
+
+## A mix of people and Place
+
+A key advantage of PMA data is that it contains 
+
+# PMA DATA {.tabset}
+
+## R Packages
+```{r, warning=FALSE, message=FALSE}
+
+library(rio)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(expss)
+library(lubridate)
+library(ggplot2)
+library(kableExtra)
+library(rmarkdown)
+library(bookdown)
+```
+
+## Import SDP Data
+
+Survey teams select health facilities based on the probability sample of enumeration areas (EAs) chosen for the household/female survey. The SDPs are health facilities accessible to the female population in each EA. Theoretically, each EA will have at least one private SDP (e.g., a pharmacy) within its boundaries and will likely have between 2 and 3 public SDPs.[@zimmerman_service_2017] Ghana's public health system designates health care delivery into three tiers:
+
+* Primary (health center or clinic)
+* Secondary (district hospital)
+* Tertiary (specialist hospitals and teaching hospitals) levels of care
+
+Note that in Ghana, districts have different levels of care, the districts have subdistricts (often with a subdistrict hospitals), and subdistricts are further split into Community Health Planning and Services (CHPs) zones. [@usaid_presidents_2017]
+
+Resident enumerator lists and maps all private facilities within the EA boundary using a specialized form. Supervisors then randomly select up to 3 private SDPs from the resident enumerator’s list. Then the supervisor interviews a knowledgeable representative of the SDP  using the questionnaire. For public facilities, the supervisor contacts district or local Ghana health service authorities for the name, facility type, and the location of the public facility, a priori designated to cover residents in the EA. The supervisor then identifies facilities at the three levels of the health system, primary (i.e., health post or clinic), secondary (i.e., intermediate health center), and tertiary (i.e., district or referral hospital). The supervisor then visits the facilities to interview a knowledgeable representative of the SDP up to three times. If a sizeable public SDP serves multiple EAs, the interview is linked to all the EAs. For example, a teaching hospital serves more than one EA; then the teaching hospital is associated with all the EAs. [@zimmerman_service_2017]
+
+```{r}
+sd1 <- import("~/Documents/GitHub/PMA2020/data/2013_SDP.dta")
+```
+
+
+## Data Wrangling
+
+```{r}
+## Create a unique ID number based on the EA ID
+
+
+```
+
+
+```{r}
+
+```
+
+
+### Outcome Variables
+
+### Independent Variables
+
+### Missing Data/ Impuation
+
+## Appending Data
+
+## Data Exports
+
+# ANALYSIS {.tabset}
+
+## Descriptive Analysis
+
+## Bivariate Analysis
+
+## Multi-level Logistic Regression
+
+# REFERENCES
+
+<div id="refs"></div>
+
+# APPENDIX
+
+## Variables
+
+
+```{r}
+
+appdx_a <- kable(a2, col.names = c("Variable Name", "Variable Label","NSFG Data"), 
+      align = c("l", "l", "l")) %>%
+  kable_paper("hover", full_width = F)
+
+## Print table
+appdx_a
+
+```
+
+
+
+
